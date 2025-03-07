@@ -1,0 +1,27 @@
+/* src/components/SignupSuccess.css */
+.signup-success-page {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .signup-success-page h2 {
+    margin-bottom: 20px;
+  }
+  
+  .signup-success-page p {
+    margin-bottom: 15px;
+  }
+  
+  .signup-success-page button {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  

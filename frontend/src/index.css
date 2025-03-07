@@ -1,0 +1,149 @@
+/* src/index.css */
+
+/* Basic reset and font */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+  
+/* Header Styles */
+.header {
+    display: flex;
+    align-items: center;
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    position: relative;
+}
+  
+/* Hamburger icon container */
+.menu-icon {
+    display: inline-block;
+    cursor: pointer;
+    /* Push the title to the center by taking up space on the left */
+    margin-right: auto;
+}
+  
+/* Each "bar" in the hamburger icon */
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+  
+/* Title in the center */
+.header-title {
+    flex: 1;
+    text-align: center;
+    font-size: 2rem;
+}
+  
+/* Container for page content under the header */
+.container {
+    padding: 20px;
+}
+  
+/* Side Menu (Drawer) */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hidden by default */
+    width: 250px;
+    height: 100%;
+    background-color: #f1f1f1;
+    transition: left 0.3s ease;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    z-index: 1000; /* On top of main content */
+}
+  
+/* Slide in when 'open' class is present */
+.side-menu.open {
+    left: 0;
+}
+  
+/* Close button in the side menu */
+.side-menu .close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+  
+/* Side menu list */
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+  
+.side-menu li {
+    margin: 10px 0;
+}
+  
+/* Style the links in the side menu */
+.side-menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+  
+.side-menu a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- ADDITIONAL CODE START ---------- */
+
+/* 1) Reintroduce the Space Age font for "AcademiNet." 
+   Make sure you have space age.ttf in 'src/fonts/'. */
+@font-face {
+    font-family: 'Space Age';
+    src: url('./fonts/space age.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+/* 2) Force the header title to use "Space Age" again. */
+.header-title {
+    font-family: 'Space Age', sans-serif !important;
+}
+  
+/* 3) Hide the side menu by default to eliminate any visible bar on the left. */
+.side-menu {
+    display: none; /* When NOT open, it's completely hidden. */
+}
+  
+/* 4) When the menu is "open," show it again (slide/position is handled by your existing code). */
+.side-menu.open {
+    display: block;
+}
+
+/* ---------- ADDITIONAL CODE END ---------- */
+
+/* ---------- ADDITIONAL CSS FOR LOGIN BUTTON ---------- */
+
+/* Position the login button on the bottom right of the header */
+.header-login {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+
+.header-login a {
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+.header-login a:hover {
+    background-color: white;
+    color: blue;
+}
+
+/* ---------- END ADDITIONAL CSS FOR LOGIN BUTTON ---------- */
